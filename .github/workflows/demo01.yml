@@ -51,6 +51,6 @@ jobs:
         env:
           CUSTOMER_ENV: ${( inputs.customer_env )}
           SERVER: ${( inputs.servers )}
-        run:
+        run: |
           echo "customer_env = $CUSTOMER_ENV"
           echo "server = $SERVER"
