@@ -49,8 +49,8 @@ jobs:
 
       - name: Test input variables
         env:
-          CUSTOMER_ENV: ${( inputs.customer_env )}
-          SERVER: ${( inputs.servers )}
+          CUSTOMER_ENV: ${{ inputs.customer_env }}
+          SERVER: ${{ inputs.servers }}
         run: |
           echo "customer_env = $CUSTOMER_ENV"
           echo "server = $SERVER"
