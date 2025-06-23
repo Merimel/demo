@@ -20,7 +20,7 @@ on:
         required: true
         default: "dbserver1"
         type: string
-      customer:
+      customer_env:
         type: choice
         options: [ "Belgium", "Poland", "France", "United Kingdom"]
         default: France
@@ -46,3 +46,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: Test input variables
+        env:
+          CUSTOMER_ENV: ${( inputs.customer_env )}
+          SERVER: ${( inputs.servers )}
+        run:
+          echo "customer_env = $CUSTOMER_ENV"
+          echo "server = $SERVER"
