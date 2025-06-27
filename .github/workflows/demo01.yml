@@ -36,13 +36,17 @@ jobs:
     steps:
       - run: pwd
       - name: Listing BEFORE
-        run: ls -l
+        run: ls -lR
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
       - run: pwd
       - name: Listing AFTER
-        run: ls -l
+        run: ls -lR
+      - name: Running fajne cho
+        run: |
+          chmod 777 ./fajne_echo.sh
+          ./fajne_echo.sh
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
