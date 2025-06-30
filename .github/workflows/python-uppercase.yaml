@@ -1,0 +1,7 @@
+name: Python Upper case
+
+on: 
+  push:
+    paths: 
+      - "py-upper/**"
+      - ".github/workflows/python-uppercase.yaml"
