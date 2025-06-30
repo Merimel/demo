@@ -34,8 +34,21 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - run: pwd
+      - name: Listing BEFORE
+        run: ls -lR
+      
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
+      - run: pwd
+      - name: Listing AFTER
+        run: ls -lR
+      - name: Running fajne cho
+        run: |
+          chmod 777 ./fajne_echo.sh
+          ./fajne_echo.sh
+      - name: Who am I
+        run: whoami
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
