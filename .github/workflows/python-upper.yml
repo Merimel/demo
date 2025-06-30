@@ -4,7 +4,7 @@ on:
   push: 
     paths:
       - "py-upper/**"
-      - ".github/workflows/python-uppercase.yml"
+      - ".github/workflows/python-upper.yml"
  
 jobs:
   build:
